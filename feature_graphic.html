@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Copyright 2025 Vivek Umrao -->
+<head>
+    <meta charset="UTF-8">
+    <title>Play Store Feature Graphic Layout</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .feature-graphic {
+            width: 1024px;
+            height: 500px;
+            background: linear-gradient(135deg, #0F2A5F 0%, #1687FF 100%);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 60px;
+            overflow: hidden;
+            position: relative;
+            font-family: sans-serif;
+        }
+        .app-name {
+            font-size: 54px;
+            font-weight: 800;
+            color: white;
+            line-height: 1.1;
+            margin-bottom: 16px;
+            text-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .tagline {
+            font-size: 24px;
+            color: rgba(255,255,255,0.9);
+            font-weight: 500;
+        }
+        .phone-mockup {
+            width: 240px;
+            height: 480px;
+            background: #111;
+            border: 8px solid #333;
+            border-radius: 36px;
+            position: relative;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            transform: rotate(-5deg) translateY(40px);
+        }
+        .screen-content {
+            background: #F8FAFC;
+            height: 100%;
+            border-radius: 28px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        .icon-circle {
+            width: 80px;
+            height: 80px;
+            background: #DBEAFE;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .floating-icon {
+            position: absolute;
+            background: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            color: #1687FF;
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body class="m-0 p-0 bg-slate-200 flex items-center justify-center min-h-screen">
+
+    <div class="feature-graphic shadow-2xl">
+        <!-- Content Side -->
+        <div class="max-w-xl z-10">
+            <div class="flex items-center gap-3 mb-4">
+                 <img src="https://www.careercrox.com/favicon.ico" class="w-10 h-10 rounded-lg hidden" alt="">
+                 <span class="text-blue-300 font-bold tracking-widest text-sm uppercase">Recruitment Tool</span>
+            </div>
+            <h1 class="app-name">Career Crox<br>Calling Assistant</h1>
+            <p class="tagline">The Ultimate Mobile Companion for Recruiters. Sync, Call, and Close Faster.</p>
+
+            <div class="mt-10 flex gap-4">
+                <div class="bg-white/10 px-4 py-2 rounded-lg border border-white/20 flex items-center gap-2">
+                    <i class="fas fa-sync text-blue-300"></i>
+                    <span class="text-white text-sm font-medium">CRM Sync</span>
+                </div>
+                <div class="bg-white/10 px-4 py-2 rounded-lg border border-white/20 flex items-center gap-2">
+                    <i class="fas fa-phone-alt text-green-400"></i>
+                    <span class="text-white text-sm font-medium">Auto Dialer</span>
+                </div>
+                <div class="bg-white/10 px-4 py-2 rounded-lg border border-white/20 flex items-center gap-2">
+                    <i class="fab fa-whatsapp text-yellow-400"></i>
+                    <span class="text-white text-sm font-medium">WhatsApp</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Visual Side -->
+        <div class="relative">
+            <div class="phone-mockup">
+                <div class="screen-content">
+                    <div class="icon-circle">
+                        <i class="fas fa-phone-volume text-blue-600 text-3xl"></i>
+                    </div>
+                    <div class="w-24 h-2 bg-slate-200 rounded mb-2"></div>
+                    <div class="w-16 h-2 bg-slate-100 rounded"></div>
+                    <div class="mt-8 bg-blue-600 w-full py-2 rounded-lg text-white text-[10px] font-bold">10s Countdown...</div>
+                </div>
+            </div>
+
+            <!-- Floating Decorative Icons -->
+            <div class="floating-icon" style="top: 0; right: -20px;">
+                <i class="fas fa-sync"></i>
+            </div>
+            <div class="floating-icon" style="bottom: 80px; left: -40px;">
+                <i class="fas fa-history"></i>
+            </div>
+            <div class="floating-icon" style="top: 150px; right: -50px; color: #10B981;">
+                <i class="fas fa-check-circle"></i>
+            </div>
+        </div>
+
+        <!-- Abstract shapes for background -->
+        <div class="absolute -bottom-20 -left-20 w-80 h-80 bg-white/5 rounded-full blur-3xl"></div>
+        <div class="absolute -top-20 right-20 w-60 h-60 bg-blue-400/10 rounded-full blur-2xl"></div>
+    </div>
+
+    <!-- Instructions -->
+    <div class="fixed bottom-10 bg-black/80 text-white px-6 py-3 rounded-full text-sm font-medium">
+        Size: 1024 x 500px | View at 100% zoom and take a screenshot of the box above.
+    </div>
+
+</body>
+</html>
